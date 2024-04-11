@@ -1,4 +1,4 @@
-### CS170_Project1
+# CS170_Project1
 
 ## Team Members
 
