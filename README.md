@@ -3,9 +3,9 @@
 ## Team Members
 
 ```
-Name - netID
+Ashley Bautista - abaut047
 
-GitHub User
+GitHub User: ashley-bautista
 ```
 
 ```
