@@ -16,10 +16,12 @@ All info relevant to state
 struct Node 
 
 class StateRep {
-    private:
-
+    private: 
+        //state rep
+        double totalCost; 
+        double heuristicCost; 
     public: 
-
+        
 
 };
 
