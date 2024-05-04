@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Problem.h"
+#include "StateRep.h"
 #include <string>
 #include <vector>
 
