@@ -4,52 +4,49 @@ using namespace std;
 
 // constructors ------------------
 
-StateRep::StateRep() {
-    this->state = { {1, 2, 3},
-                    {4, 5, 6}, 
-                    {7, 8, 0} };
-    this->totalCost = 0;
-    this->heuristicCost = 0;
+StateRep::StateRep(int state[puzzleDim][puzzleDim]) {
+    setState(state);
 }
 
-StateRep::StateRep(int state[][], double totalCost, double heuristicCost) {
-    this->state = state;
+StateRep::StateRep(int state[puzzleDim][puzzleDim], double totalCost, double heuristicCost) {
+    setState(state);
     this->totalCost = totalCost;
     this->heuristicCost = heuristicCost;
 }
 
 // state ----------------------
 
-int StateRep::setState(state[][]) {
-    this->state = state;
-}
-
-int[][] StateRep::getState() const {
-    return this->state; 
+void StateRep::setState(int state[puzzleDim][puzzleDim]) {
+    for (unsigned int i = 0; i < 3; ++i) {
+        for (unsigned int j = 0; j < 3; ++j) {
+            this->state[i][j] = state[i][j];
+        }
+    }
 }
 
 void StateRep::printState() const {
-    for (unsigned int i = 0; i < 3; ++i) {
-        for (unsigned int j = 0; j < 3; ++j) {
-            cout << state[i][j]
+    for (unsigned int i = 0; i < puzzleDim; ++i) {
+        for (unsigned int j = 0; j < puzzleDim; ++j) {
+            cout << state[i][j] << " ";
         }
+        cout << "\n";
     }
 }
 
 // totalCost ------------------------
 
-double StateRep::setTotalCost() {
-
+void StateRep::setTotalCost(double totalCost) {
+    this->totalCost = totalCost;
 }
 
 double StateRep::getTotalCost() const {
-    return this->totalCost(); 
+    return this->totalCost; 
 }
 
 // heuristicCost -------------------------
 
-double StateRep::setHeuristicCost() {
-
+void StateRep::setHeuristicCost(double heuristicCost) {
+    this->heuristicCost = heuristicCost;
 }
 
 double StateRep::getHeuristicCost() const {
