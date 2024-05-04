@@ -1,4 +1,4 @@
-#include "Node.h"
+#include "StateRep.h"
 
 using namespace std;
 
