@@ -4,7 +4,7 @@
 #include <string>
 #include <vector>
 
-void inputPuzzle(std::vector<std::vector<int>> userDefinedPuzzle)
+void inputPuzzle(std::vector<std::vector<int>>& userDefinedPuzzle)
 {
     std::string order_string[3] = {"first", "second", "third"};
     std::cout << "Enter your puzzle, use a zero to represent the blank\n";
@@ -15,12 +15,24 @@ void inputPuzzle(std::vector<std::vector<int>> userDefinedPuzzle)
             std::cin >> userDefinedPuzzle[i][j];
         }
     }
+    std::cout << "This is your current pazzle\n";
+    for (int i = 0; i < 3; i++){//set up an user defined puzzle;
+        std::cout << "\n";
+        for (int j = 0; j < 3; j++)
+        {
+            std::cout << userDefinedPuzzle[i][j];
+        }
+    }
 }
 
 int main()
 {   
     std::vector<std::string> operators = {"up", "down", "left", "right"};
-    std::vector<std::vector<int>> userDefinedPuzzle;
+    std::vector<std::vector<int>> userDefinedPuzzle = {
+        {0, 0, 0},
+        {0, 0, 0},
+        {0, 0, 0}
+    };
     std::vector<std::vector<int>> defaultPuzzle = {
         {1, 2, 3},
         {4, 5, 6},
