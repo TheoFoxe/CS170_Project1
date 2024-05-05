@@ -1,6 +1,6 @@
 # CS170_Project1
 
-## Team Members
+## Team Member Information
 
 ```
 Ashley Bautista - abaut047
