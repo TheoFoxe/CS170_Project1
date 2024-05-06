@@ -4,11 +4,11 @@ using namespace std;
 
 // constructors ------------------
 
-StateRep::StateRep(int state[puzzleDim][puzzleDim]) {
+StateRep::StateRep(vector<vector<int>> state) {
     setState(state);
 }
 
-StateRep::StateRep(int state[puzzleDim][puzzleDim], double totalCost, double heuristicCost) {
+StateRep::StateRep(vector<vector<int>> state, double totalCost, double heuristicCost) {
     setState(state);
     this->totalCost = totalCost;
     this->heuristicCost = heuristicCost;
@@ -16,12 +16,8 @@ StateRep::StateRep(int state[puzzleDim][puzzleDim], double totalCost, double heu
 
 // state ----------------------
 
-void StateRep::setState(int state[puzzleDim][puzzleDim]) {
-    for (unsigned int i = 0; i < 3; ++i) {
-        for (unsigned int j = 0; j < 3; ++j) {
-            this->state[i][j] = state[i][j];
-        }
-    }
+void StateRep::setState(const vector<vector<int>>& state) {
+    this->state = state;
 }
 
 void StateRep::printState() const {
@@ -31,6 +27,10 @@ void StateRep::printState() const {
         }
         cout << "\n";
     }
+}
+
+const vector<vector<int>>& StateRep::getState() const {
+    return state;
 }
 
 // totalCost ------------------------
