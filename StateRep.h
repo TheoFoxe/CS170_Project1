@@ -23,18 +23,17 @@ const int puzzleDim = 3;
 
 class StateRep {
     private: 
-        int state[puzzleDim][puzzleDim] = { {1, 2, 3}, 
-                                            {4, 5, 6}, 
-                                            {7, 8, 0}}; 
+        std::vector<std::vector<int>> state; 
         double totalCost = 0; 
         double heuristicCost = 0; 
 
     public: 
         StateRep();
-        StateRep(int state[puzzleDim][puzzleDim]);
-        StateRep(int state[puzzleDim][puzzleDim], double totalCost, double heuristicCost);
+        StateRep(std::vector<std::vector<int>> state);
+        StateRep(std::vector<std::vector<int>> state, double totalCost, double heuristicCost);
 
-        void setState(int state[puzzleDim][puzzleDim]);
+        void setState(const std::vector<std::vector<int>>& state);
+        const std::vector<std::vector<int>>& getState() const;
         void printState() const; 
 
         void setTotalCost(double totalCost);
