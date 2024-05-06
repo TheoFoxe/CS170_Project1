@@ -28,7 +28,7 @@ void StateRep::setState(vector<vector<int>>) {
     this->state = state;
 }
 
-const vector<vector<int>> & getState() const {
+const vector<vector<int>> & StateRep::getState() const {
     return this->state;
 }
 
