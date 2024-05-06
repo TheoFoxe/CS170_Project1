@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/98767/CS170_Project1",
-      "program": "c:/Users/98767/CS170_Project1/build/Debug/outDebug",
+      "cwd": "/Users/ashleybautista/CS170_Project1",
+      "program": "/Users/ashleybautista/CS170_Project1/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
