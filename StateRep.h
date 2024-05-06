@@ -5,6 +5,8 @@
 #include <vector>
 #include <string>
 
+using namespace std;
+
 /*
 All info relevant to state
 
@@ -23,18 +25,17 @@ const int puzzleDim = 3;
 
 class StateRep {
     private: 
-        int state[puzzleDim][puzzleDim] = { {1, 2, 3}, 
-                                            {4, 5, 6}, 
-                                            {7, 8, 0}}; 
-        double totalCost = 0; 
-        double heuristicCost = 0; 
+        vector<vector<int>> state;
+        double totalCost; 
+        double heuristicCost; 
 
     public: 
         StateRep();
-        StateRep(int state[puzzleDim][puzzleDim]);
-        StateRep(int state[puzzleDim][puzzleDim], double totalCost, double heuristicCost);
+        StateRep(vector<vector<int>> state);
+        StateRep(vector<vector<int>> state, double totalCost, double heuristicCost);
 
-        void setState(int state[puzzleDim][puzzleDim]);
+        void setState(vector<vector<int>> state);
+        const vector<vector<int>> & getState() const; 
         void printState() const; 
 
         void setTotalCost(double totalCost);
