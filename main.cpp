@@ -1,11 +1,15 @@
 #include <iostream>
 #include "Problem.h"
 #include "StateRep.h"
-#include "UniformCostSearch.h" 
-#include "AstarMisplaced.h" 
-#include "AstarEuclideanSolver.h" 
+// #include "StateRep.h"
+// #include "UniformCostSearch.h" 
+//#include "AstarMisplaced.h" 
+#include "MisplacedTest.cpp"
+// #include "AstarEuclideanSolver.h" 
 #include <string>
 #include <vector>
+
+using namespace std;
 
 void displayPuzzle(std::vector<std::vector<int>>& Puzzle)
 {
@@ -17,6 +21,7 @@ void displayPuzzle(std::vector<std::vector<int>>& Puzzle)
             std::cout << Puzzle[i][j];
         }
     }
+    cout << endl;
 }
 
 void inputPuzzle(std::vector<std::vector<int>>& userDefinedPuzzle)
@@ -30,6 +35,7 @@ void inputPuzzle(std::vector<std::vector<int>>& userDefinedPuzzle)
             std::cin >> userDefinedPuzzle[i][j];
         }
     }
+    cout << endl;
 }
 
 int main()
@@ -51,7 +57,7 @@ int main()
         {0, 0, 0}
     };
 
-    int PuzzleChoice;
+    size_t PuzzleChoice;
     std::vector<std::vector<std::vector<int>>> puzzles;//Define a vector of 2D vector puzzles 
     puzzles.push_back(goalPuzzle);
     puzzles.push_back(defaultPuzzle);
@@ -67,8 +73,6 @@ int main()
         displayPuzzle(userDefinedPuzzle);
     } 
 
-    Problem problem(puzzles[PuzzleChoice], puzzles[0], operators);
-
     int AlgorithmChoice;
     std::cout << "Enter your choice of algorithm (1/2/3)\n";
     std::cout << "1. Uniform Cost Search\n";
@@ -76,15 +80,16 @@ int main()
     std::cout << "3. A* with the Euclidean distance heuristic.\n";
     std::cin >> AlgorithmChoice;
 
-    int stepCnt = 0;
-    std::vector<StateRep> solutionPath;
     if(AlgorithmChoice == 1){
         std::cout << "executing Uniform Cost Search\n";
-        UniformCostSearch ucs;
-        solutionPath = ucs.UCS(problem);
     }
     else if(AlgorithmChoice == 2){
         std::cout << "executing A* with the Misplaced Tile heuristic\n";
+        cout << "Expanding state\n";
+        displayPuzzle(puzzles[PuzzleChoice]);
+        cout << endl;
+
+        aStarSearch(puzzles[PuzzleChoice], puzzles[0]);
     }
     else if(AlgorithmChoice == 3){
         std::cout << "executing A* with the Euclidean distance heuristic\n";
@@ -93,17 +98,6 @@ int main()
         std::cout << "Invalid algorithm choice.\n";
         return 1;
     }
-
-    //Executing selected algorithm on initial Puzzle to reach the goal Puzzle via operators
-    for (int i = 0; i < solutionPath.size(); i++)
-    {
-        solutionPath[i].printState();
-    }
-    std::cout << "Goal!!!\n\n";
-    std::cout << "To solve this problem the search algorithm expanded a total of " << solutionPath.getTotalCost() << "nodes.\n";
-    std::cout << "The maximum number of nodes in the queue at any one time: " << solutionPath.getMaxNodes() << ".\n";
-    std::cout << "The depth of the goal node was " << solutionPath.getDepth() <<".\n";
-
 
     return 0;
 }
