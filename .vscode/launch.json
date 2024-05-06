@@ -2,23 +2,31 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "C/C++ Runner: Debug Session",
+      "name": "(lldb) Launch",
       "type": "cppdbg",
       "request": "launch",
+      "program": "enter program name, for example ${workspaceFolder}/a.out",
       "args": [],
       "stopAtEntry": false,
-      "externalConsole": true,
-      "cwd": "c:/Users/98767/OneDrive/图片/宠物/cs170/project1/CS170_Project1",
-      "program": "c:/Users/98767/OneDrive/图片/宠物/cs170/project1/CS170_Project1/build/Debug/outDebug",
-      "MIMode": "gdb",
-      "miDebuggerPath": "gdb",
-      "setupCommands": [
-        {
-          "description": "Enable pretty-printing for gdb",
-          "text": "-enable-pretty-printing",
-          "ignoreFailures": true
-        }
-      ]
+      "cwd": "${fileDirname}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "lldb"
+    },
+    {
+      "name": "(lldb) Attach",
+      "type": "cppdbg",
+      "request": "attach",
+      "program": "enter program name, for example ${workspaceFolder}/a.out",
+      "MIMode": "lldb"
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/ashleybautista/CS170_Project1",
+      "program": "/Users/ashleybautista/CS170_Project1/build/Debug/outDebug"
     }
   ]
 }

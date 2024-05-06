@@ -13,4 +13,6 @@ struct Node
 // A* Search Algorithm with the Euclidean Distance heuristic.
 std::vector<std::vector<int> > aStarSearch(const std::vector<std::vector<int> > &initial, const std::vector<std::vector<int> > &goal); // Here
 
+const std::__1::vector<std::__1::vector<int> > &NewFunction();
+
 #endif // ASTAR_EUCLIDEAN_SOLVER_H
