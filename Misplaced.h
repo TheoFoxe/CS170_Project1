@@ -8,7 +8,9 @@
 #include "Problem.h"
 #include "UniformCostSearch.h"
 
-
+double heuristicFunction(Puzzle &current) {
+        return 0.0;
+    };
 
 // Calculate the heuristic cost using the Misplaced Tile heuristic
 class MisplacedTileSolver : public UniformCostSolver {
