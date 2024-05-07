@@ -4,6 +4,9 @@
 
 #include "Problem.h"
 #include "AstarEuclideanSolver.h"
+//#include "Misplaced.h"
+#include "UniformCostSearch.h"
+
 using namespace std;
 
 void inputPuzzle(std::vector<std::vector<int>>& userDefinedPuzzle)

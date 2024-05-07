@@ -8,12 +8,13 @@
 #include "Problem.h"
 #include "UniformCostSearch.h"
 
-double heuristicFunction(Puzzle &current){
+double heuristicFunction(Problem &current){
     return 0.0;
 };
 class EuclideanDistanceSolver : public UniformCostSearch {
 public:
-    EuclideanDistanceSolver(Problem &current) {
+    EuclideanDistanceSolver(Problem &goal) : UniformCostSearch(goal){};
+    virtual double heuristicFunction(Problem &current){ 
         double distance = 0.0;
         for (int i = 0; i < PUZZLE_SIZE; ++i) {
             for (int j = 0; j < PUZZLE_SIZE; ++j) {
