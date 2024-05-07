@@ -1,6 +1,14 @@
 # Challenges
 
-//TODO
+A big problem we had was integrating code from each of our separate parts so that they'd work well together. This challenge was built off of another challenge we had -- planning out the design of the project, and which we changed accordingly throughout the project. 
+
+Another set of problems we had was dealing with the invalid states, and picking out what data structures to use for efficiency. 
+For our challenges, we were struggling to come to a cohesive design for this project. 
+
+We had to be mindful when coding to avoid clashing with other files while integrating. 
+
+Another issue was to deal with the invalid states, or picking what data structures to use. 
+
 
 # Design
 
@@ -10,9 +18,9 @@ When we were brainstorming and solidifying our ideas for this group project, we 
 
 In `StateRep.h`, we have all the information that is relevant to the state. This includes the current state representation, the total cost, and the heuristic cost. As shown in `StateRep.h`', we decided to represent our states through 3x3 2D arrays. The total cost and heuristic cost are both represented as doubles. 
 
-After a while in coding, we found out it is necessary to use StateRep.h (just integrate all functionalities into the problem class is enough) and found out that operators are unneccssary to pass in, which makes the code more understandable for reviewers.
+After a while in coding, we found out it is unnecessary to use `StateRep.h` (integrating all functionalities into the problem class is enough) and found out that operators are unneccssary to pass in, which makes the code more understandable for reviewers.
 
-In the problem.cpp,
+In the Problem Class, we have `Problem.h` and `Problem.cpp`. In this class, we can define our operators, the initial state, and the desired goal state of a given problem. 
 
 # Questions
 
@@ -30,7 +38,7 @@ We used a tree based search, and inlucded a hash string to record the visited st
 //Comparing Heuristic Functions in terms of time and space and analyzing the results with
 diagrams and/or tables. 
 
-|               | Uniform Cost Search |Misplaced Tyle Heuristic| Manhattan Distance Heuristic |
+|               | Uniform Cost Search |Misplaced Tile Heuristic| Euclidean Distance Heuristic |
 | ------------- |:-------------------:|:----------------------:|:----------------------------:|
 | Trivial(0)    |                    0|                       0|                             0|
 | Very Easy (1) |                    5|                       3|                             3|
@@ -112,28 +120,25 @@ diagrams and/or tables.
 ### Ashley Bautista:
 - Created and worked on initial UML Design
 - Worked on the "Euclidean Distance Heuristic"
-- //TODO
+- Made changes to problem class
+- Worked on report
 
 ### Chantal Arguelles: 
 - Created GitHub repo and shared it with team members
 - Worked on initial UML Design
 - Created Node class `StateRep.cpp` and `StateRep.h`
 - Worked on report
-- //TODO
 
 ### Sam Xie: 
 - Worked on initial UML Design
 - Created initial skeleton code for `Problem.cpp` and `Problem.h`
 - Worked on the "Uniform Cost Search"
-- //TODO
 
 ### Jay Xu: 
 - Worked on initial UML Design
 - Created and worked on U.I. as seen in `Main.cpp`
 - worked on report
-- //TODO
 
 ### Chengzhe Liu: 
 - Worked on initial UML Design 
 - Created `AstarWithMisplacedTile.cpp` and `AstarMisplacedSolver.h`, the "Misplaced Tile Heuristic"
-- //TODO
