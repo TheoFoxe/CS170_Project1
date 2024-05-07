@@ -112,6 +112,7 @@ diagrams and/or tables.
 ### Ashley Bautista:
 - Created and worked on initial UML Design
 - Worked on the "Euclidean Distance Heuristic"
+- Made changes to problem class
 - //TODO
 
 ### Chantal Arguelles: 
