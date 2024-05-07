@@ -19,7 +19,7 @@ std::vector<std::string> Problem::getOperators() {
 }
 
 // Returns the position of the blank tile in 2d array as a tuple
-std::pair<int, int> Problem::getBlankPos(std::vector<std::vector<int>>& state) {
+std::pair<int, int> Problem::getBlankPos(const std::vector<std::vector<int>>& state) {
     for (int i = 0; i < 3; i++) {
         for (int j = 0; j < 3; j++) {
             if (state[i][j] == 0) {
@@ -36,6 +36,7 @@ std::pair<int, int> Problem::getNewPos(std::string opName, std::pair<int, int> b
     int col = blankPos.second;
 
     if (opName == "up") {
+        return {row - 1, col};
     } else if (opName == "down") {
         return {row + 1, col};
     } else if (opName == "left") {
@@ -46,7 +47,7 @@ std::pair<int, int> Problem::getNewPos(std::string opName, std::pair<int, int> b
     return {-1, -1}; 
 }
 
-std::vector<std::vector<int>> Problem::applyOperation(std::vector<std::vector<int>>& state, std::string opName) {
+std::vector<std::vector<int>> Problem::applyOperation(const std::vector<std::vector<int>>& state, std::string opName) {
     std::pair<int, int> blankPos = getBlankPos(state);
     std::pair<int, int> newPos = getNewPos(opName, blankPos);
 
