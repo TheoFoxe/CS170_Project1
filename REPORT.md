@@ -1,6 +1,10 @@
 # Challenges
 
+A big problem we had was integrating code from each of our separate parts so that they'd work well together. This challenge was built off of another challenge we had -- planning out the design of the project, and which we changed accordingly throughout the project. 
+
+Another set of problems we had was dealing with the invalid states, and picking out what data structures to use for efficiency. 
 //TODO
+
 
 # Design
 
@@ -113,6 +117,7 @@ diagrams and/or tables.
 - Created and worked on initial UML Design
 - Worked on the "Euclidean Distance Heuristic"
 - Made changes to problem class
+- Worked on report
 - //TODO
 
 ### Chantal Arguelles: 
