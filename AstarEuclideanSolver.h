@@ -68,7 +68,7 @@ public:
             if (top == goal) {
                 ZZZ = top.getG();//store depth of goal node
 
-                cout << "We solved the puzzle!" << endl;
+                cout << "Finally, we had solved this puzzle!" << endl;
                 cout << "Use the move list: " << top.op << endl;
 
                 return true;
