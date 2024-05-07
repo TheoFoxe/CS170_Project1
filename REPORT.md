@@ -10,17 +10,20 @@ When we were brainstorming and solidifying our ideas for this group project, we 
 
 In `StateRep.h`, we have all the information that is relevant to the state. This includes the current state representation, the total cost, and the heuristic cost. As shown in `StateRep.h`', we decided to represent our states through 3x3 2D arrays. The total cost and heuristic cost are both represented as doubles. 
 
-//TODO - add info about Problem class
+After a while in coding, we found out it is necessary to use StaeRep.h (just integrate all functionalities into the problem class is enough) and found out that operators are unneccssary to pass in, which makes the code more understandable for reviewers.
+
+In the problem.cpp,
 
 # Questions
 
 1. Did you try optimizing your code by using special data structures that make searching for and comparing states faster?
 
-//TODO
+ - Hash set: keeps track of visited states in a search algorthm, serves as an indicater.
+ - Priority Queue: Manages the frontier where the next states to be explored, remain the order of puzzles absed on their heuristic plus path cost.
 
 2. Did you implement a graph search (keeping record of all explored nodes), or did you use a tree search algorithm? If you tried both, you can compare the number of nodes created, and number of nodes expanded for each version (tree search and graph search). Note that you don’t ned to implement and compare both tree and graph searches. But if you did, you can write about your observations.
 
-//TODO
+We used a tree based search, and inlucded a hash string to record the visited state; however, tree search can be seen as one of the graph search methods.
 
 # Heuristic Functions
 
@@ -36,8 +39,54 @@ diagrams and/or tables.
 | Impossible (5)|                     |                        |                              |
 
 # Test Cases
-
-//TODO
+ - GoalPuzzle
+ {1, 2, 3}
+ {4, 5 ,6}
+ {7, 8, 0}
+ - defaultPuzzle
+ {1, 2, 3}
+ {4, 5, 6}
+ {7, 0, 8}
+ 1. Uniform Cost Search:
+    Finally, we had solved this puzzle!
+    Use the move list: R
+    To solve this problem the search algorithm expanded a total of 7 nodes.
+    The maximum number of nodes in the queue at any one time: 5.
+    The depth of the goal node was  1.
+ 2. A* with the Misplaced Tile heuristic:
+    Finally, we had solved this puzzle!
+    Use the move list: R
+    To solve this problem the search algorithm expanded a total of 4 nodes.
+    The maximum number of nodes in the queue at any one time: 3.
+    The depth of the goal node was  1.
+ 3. A* with the Euclidean distance heuristic:
+    Finally, we had solved this puzzle!
+    Use the move list: R
+    To solve this problem the search algorithm expanded a total of 4 nodes.
+    The maximum number of nodes in the queue at any one time: 3.
+    The depth of the goal node was  1.
+ - userDefinedPuzzle
+ {8, 7, 1}
+ {6, 0, 2}
+ {5, 4, 3}
+ 1. Uniform Cost Search:
+    Finally, we had solved this puzzle!
+    Use the move list: DLUURDDLUURRDDLLUURRDD
+    To solve this problem the search algorithm expanded a total of 109617 nodes.
+    The maximum number of nodes in the queue at any one time: 24969.
+    The depth of the goal node was  22.
+ 2. A* with the Misplaced Tile heuristic:
+    Finally, we had solved this puzzle!
+    Use the move list: DLUURRDDLLUURRDDLLURRD
+    To solve this problem the search algorithm expanded a total of 8955 nodes.
+    The maximum number of nodes in the queue at any one time: 3307.
+    The depth of the goal node was  22.
+ 3. A* with the Euclidean distance heuristic:
+    Finally, we had solved this puzzle!
+    Use the move list: LDRUURDDLULURRDLLDRURD
+    To solve this problem the search algorithm expanded a total of 1510 nodes.
+    The maximum number of nodes in the queue at any one time: 548.
+    The depth of the goal node was  22.
 
 # Individual Contributions Summary
 
