@@ -38,7 +38,7 @@ We used a tree based search, and inlucded a hash string to record the visited st
 //Comparing Heuristic Functions in terms of time and space and analyzing the results with
 diagrams and/or tables. 
 
-|               | Uniform Cost Search |Misplaced Tyle Heuristic| Manhattan Distance Heuristic |
+|               | Uniform Cost Search |Misplaced Tile Heuristic| Euclidean Distance Heuristic |
 | ------------- |:-------------------:|:----------------------:|:----------------------------:|
 | Trivial(0)    |                    0|                       0|                             0|
 | Very Easy (1) |                    5|                       3|                             3|
