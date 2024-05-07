@@ -32,12 +32,12 @@ diagrams and/or tables.
 
 |               | Uniform Cost Search |Misplaced Tyle Heuristic| Manhattan Distance Heuristic |
 | ------------- |:-------------------:|:----------------------:|:----------------------------:|
-| Trivial(0)    |                     |                        |                              |
-| Very Easy (1) |                     |                        |                              |
-| Easy (2)      |                     |                        |                              |
-| Doable (3)    |                     |                        |                              |
-| Oh Boy (4)    |                     |                        |                              |
-| Impossible (5)|                     |                        |                              |
+| Trivial(0)    |                    0|                       0|                             0|
+| Very Easy (1) |                    5|                       3|                             3|
+| Easy (2)      |                    4|                       3|                             3|
+| Doable (3)    |                   18|                       4|                             4|
+| Oh Boy (4)    |                24969|                    3307|                           548|
+| Impossible (5)|                24188|                   22922|                         18334|
 
 # Test Cases
 
