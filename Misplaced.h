@@ -6,7 +6,7 @@
 #include <queue>
 #include <cmath>
 #include "Puzzle.h"
-#include "UCS.h"
+#include "UniformCostSearch.h"
 
 
 double heuristicFunction(Puzzle &current) {
