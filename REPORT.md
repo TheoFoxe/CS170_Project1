@@ -4,7 +4,7 @@
 
 # Design
 
-![project1_design](assets/cs170_project1_design.PNG)
+![project1_design](assets/lucidchart.png) 
 
 When we were brainstorming and solidifying our ideas for this group project, we decided to make a diagram to represent our Node class (which is now `StateRep.h`) and our Problem class (which is `Problem.h`). 
 
@@ -26,6 +26,14 @@ In `StateRep.h`, we have all the information that is relevant to the state. This
 
 //Comparing Heuristic Functions in terms of time and space and analyzing the results with
 diagrams and/or tables. 
+|               | Uniform Cost Search |Misplaced Tyle Heuristic| Manhattan Distance Heuristic |
+| ------------- |:-------------------:|:----------------------:|:----------------------------:|
+| Trivial(0)    |                     |                        |                              |
+| Very Easy (1) |                     |                        |                              |
+| Easy (2)      |                     |                        |                              |
+| Doable (3)    |                     |                        |                              |
+| Oh Boy (4)    |                     |                        |                              |
+| Impossible (5)|                     |                        |                              |
 
 # Test Cases
 
