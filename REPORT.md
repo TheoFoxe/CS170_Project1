@@ -1,6 +1,10 @@
 # Challenges
 
-//TODO
+For our challenges, we were struggling to come to a cohesive design for this project. 
+
+We had to be mindful when coding to avoid clashing with other files while integrating. 
+
+Another issue was to deal with the invalid states, or picking what data structures to use. 
 
 # Design
 
@@ -11,8 +15,6 @@ When we were brainstorming and solidifying our ideas for this group project, we 
 In `StateRep.h`, we have all the information that is relevant to the state. This includes the current state representation, the total cost, and the heuristic cost. As shown in `StateRep.h`', we decided to represent our states through 3x3 2D arrays. The total cost and heuristic cost are both represented as doubles. 
 
 After a while in coding, we found out it is necessary to use StateRep.h (just integrate all functionalities into the problem class is enough) and found out that operators are unneccssary to pass in, which makes the code more understandable for reviewers.
-
-In the problem.cpp,
 
 # Questions
 
@@ -112,28 +114,23 @@ diagrams and/or tables.
 ### Ashley Bautista:
 - Created and worked on initial UML Design
 - Worked on the "Euclidean Distance Heuristic"
-- //TODO
 
 ### Chantal Arguelles: 
 - Created GitHub repo and shared it with team members
 - Worked on initial UML Design
 - Created Node class `StateRep.cpp` and `StateRep.h`
 - Worked on report
-- //TODO
 
 ### Sam Xie: 
 - Worked on initial UML Design
 - Created initial skeleton code for `Problem.cpp` and `Problem.h`
 - Worked on the "Uniform Cost Search"
-- //TODO
 
 ### Jay Xu: 
 - Worked on initial UML Design
 - Created and worked on U.I. as seen in `Main.cpp`
 - worked on report
-- //TODO
 
 ### Chengzhe Liu: 
 - Worked on initial UML Design 
 - Created `AstarWithMisplacedTile.cpp` and `AstarMisplacedSolver.h`, the "Misplaced Tile Heuristic"
-- //TODO
