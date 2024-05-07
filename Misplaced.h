@@ -7,18 +7,20 @@
 #include <cmath>
 #include "Problem.h"
 #include "UniformCostSearch.h"
+#include "AstarEuclideanSolver.h"
 
 
-double heuristicFunction(Puzzle &current) {
+double heuristicFunction(Problem &current) {
         return 0.0;
     };
 
 // Calculate the heuristic cost using the Misplaced Tile heuristic
-class MisplacedTileSolver : public UniformCostSolver {
+class MisplacedTileSolver : public UniformCostSearch {
 public:
     //set up goal puzzle
-    MisplacedTileSolver(Puzzle& goal) : UniformCostSolver(goal) {};
-    virtual double heuristicFunction(Puzzle& current) override {
+    MisplacedTileSolver(Problem& goal) : UniformCostSearch(goal) {};
+    // Overridden to calculate the number of misplaced tiles compared to the goal state.
+    virtual double heuristicFunction(Problem& current) override {
         double misplaced = 0;
         for (size_t i = 0; i < PUZZLE_SIZE; ++i) {
             for (size_t j = 0; j < PUZZLE_SIZE; ++j) {
