@@ -5,7 +5,7 @@
 #include <string>
 #include <queue>
 #include <cmath>
-#include "Puzzle.h"
+#include "Problem.h"
 #include "UniformCostSearch.h"
 
 
