@@ -5,8 +5,9 @@
 #include <string>
 #include <queue>
 #include <cmath>
-#include "Problem.h"
-#include "UniformCostSearch.h"
+#include "Puzzle.h"
+#include "UCS.h"
+
 
 double heuristicFunction(Puzzle &current) {
         return 0.0;
