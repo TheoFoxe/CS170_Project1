@@ -115,6 +115,15 @@ diagrams and/or tables.
     The maximum number of nodes in the queue at any one time: 548.
     The depth of the goal node was  22.
 
+## Compilation Instructions
+
+To compile, follow these steps:
+
+1. Open a terminal or command prompt.
+2. Navigate to the directory containing the project files.
+3. Use the following command to compile the main.cpp file: g++ -std=c++11 main.cpp -o a.exe
+4. After compilation, run the executable using: ./a.exe
+   
 # Individual Contributions Summary
 
 ### Ashley Bautista:
