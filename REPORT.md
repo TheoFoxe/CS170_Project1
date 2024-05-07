@@ -18,9 +18,9 @@ When we were brainstorming and solidifying our ideas for this group project, we 
 
 In `StateRep.h`, we have all the information that is relevant to the state. This includes the current state representation, the total cost, and the heuristic cost. As shown in `StateRep.h`', we decided to represent our states through 3x3 2D arrays. The total cost and heuristic cost are both represented as doubles. 
 
-After a while in coding, we found out it is unnecessary to use StateRep.h (integrating all functionalities into the problem class is enough) and found out that operators are unneccssary to pass in, which makes the code more understandable for reviewers.
+After a while in coding, we found out it is unnecessary to use `StateRep.h` (integrating all functionalities into the problem class is enough) and found out that operators are unneccssary to pass in, which makes the code more understandable for reviewers.
 
-In the problem.cpp,
+In the Problem Class, we have `Problem.h` and `Problem.cpp`. In this class, we can define our operators, the initial state, and the desired goal state of a given problem. 
 
 # Questions
 
